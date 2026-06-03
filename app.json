@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "CalAI",
+    "slug": "CalAI",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0A0A0F"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.yourname.calai",
+      "infoPlist": {
+        "NSCameraUsageDescription": "CalAI needs camera access to photograph your meals for AI nutrition analysis.",
+        "NSPhotoLibraryUsageDescription": "CalAI needs photo library access to analyze your food photos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0A0F"
+      },
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE"]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow CalAI to access your camera to photograph meals."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow CalAI to access your photos to analyze food."
+        }
+      ]
+    ]
+  }
+}
